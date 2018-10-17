@@ -1,0 +1,13 @@
+<div style="text-align:center">
+    <h1>Photo Blog</h1>
+    <div *ngFor="let entry of entries; let i = index" (click)="signleEntry(i)">
+      <h2>{{entries[i].title}}</h2>
+      <img src="{{entries[i].photo}}" alt="{{entries[i].description}}" (click)="signleEntry(i)" routerLink="photo">
+      <h4>{{entries[i].description}}</h4>
+        <h2>Comments</h2>
+        <div *ngFor="let comment of entry.comments">
+        <h4 *ngIf="comment.name != undefined">{{comment.name}}</h4>
+        <p *ngIf="comment.name != undefined">{{comment.comment}}</p>
+      </div>
+    </div>
+  </div>

@@ -2,10 +2,11 @@ import { NgModule } from "@angular/core";
 import { RouterModule, Routes} from "@angular/router";
 import { AppComponent } from "./app.component";
 import { EntryComponent } from "./entry/entry.component";
+import { FullBlogComponent } from "./full-blog/full-blog.component";
 
 
 const appRoutes: Routes = [
-	{path: '', component: AppComponent } ,
+	{path: '', component: FullBlogComponent } ,
 	{path: 'photo', component: EntryComponent }
   
   ];
